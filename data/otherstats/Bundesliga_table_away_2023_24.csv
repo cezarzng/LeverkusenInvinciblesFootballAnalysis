@@ -1,0 +1,19 @@
+idx,name,played,wins,draws,losses,scoresStr,goalConDiff,pts
+1,Bayer Leverkusen,17,14,3,0,42-13,29,45
+2,VfB Stuttgart,17,10,1,6,28-24,4,31
+3,Borussia Dortmund,17,8,6,3,31-21,10,30
+4,Bayern München,17,9,2,6,41-33,8,29
+5,RB Leipzig,17,8,4,5,37-27,10,28
+6,Hoffenheim,17,7,2,8,35-35,0,23
+7,Freiburg,17,6,2,9,17-28,-11,20
+8,Eintracht Frankfurt,17,4,6,7,22-29,-7,18
+9,Werder Bremen,17,4,5,8,19-28,-9,17
+10,FC Heidenheim,17,3,7,7,20-29,-9,16
+11,Augsburg,17,4,3,10,24-34,-10,15
+12,Wolfsburg,17,4,3,10,16-31,-15,15
+13,Borussia Mönchengladbach,17,2,7,8,29-41,-12,13
+14,Mainz 05,17,1,9,7,16-33,-17,12
+15,1. FC Köln,17,1,8,8,13-32,-19,11
+16,Darmstadt,17,2,5,10,15-42,-27,11
+17,Union Berlin,17,2,4,11,11-28,-17,10
+18,Bochum,17,2,4,11,16-45,-29,10
