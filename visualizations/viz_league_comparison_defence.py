@@ -30,7 +30,9 @@ def bar_chart(df, team_col, value_col, title, ylabel, out_path, highlight=TEAM_N
     colors = ["red" if t == highlight else "grey" for t in df[team_col]]
 
     fig, ax = plt.subplots(figsize=(12, 6))
-    ax.bar(df[team_col], df[value_col], color=colors)
+    bars = ax.bar(df[team_col], df[value_col], color=colors)
+    ax.bar_label(bars, fmt="%.2f")
+
     ax.set_title(title)
     ax.set_ylabel(ylabel)
     ax.set_xticklabels(df[team_col], rotation=90)

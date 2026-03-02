@@ -24,7 +24,8 @@ def main():
     
     colors = ["red" if t == TEAM_NAME else "grey" for t in df_pos["Team"]]
 
-    ax.bar(df_pos["Team"], df_pos["Possession (%)"], color=colors)
+    bars = ax.bar(df_pos["Team"], df_pos["Possession (%)"], color=colors)
+    ax.bar_label(bars, fmt="%.0f%%")
 
     ax.set_title("Bundesliga 23/24 - Possesion (%)")
     ax.set_ylabel("Possesion (%)")
@@ -43,7 +44,8 @@ def main():
     
     colors = ["red" if t == TEAM_NAME else "grey" for t in df_acc["Team"]]
 
-    ax.bar(df_acc["Team"], df_acc["Pass Success (%)"], color=colors)
+    barsacc = ax.bar(df_acc["Team"], df_acc["Pass Success (%)"], color=colors)
+    ax.bar_label(barsacc, fmt="%.0f%%")
 
     ax.set_title("Bundesliga 23/24 - Pass Accuracy (%)")
     ax.set_ylabel("Pass Accuracy (%)")

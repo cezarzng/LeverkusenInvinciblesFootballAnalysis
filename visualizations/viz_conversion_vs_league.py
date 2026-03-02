@@ -25,12 +25,18 @@ def main():
 
     colors = ["red" if t == TEAM_NAME else "grey" for t in df_conv["Team"]]
 
-    ax.bar(df_conv["Team"], df_conv["conversion_rate"], color=colors)
+    bars = ax.bar(df_conv["Team"], df_conv["conversion_rate"], color=colors)
+    ax.bar_label(bars, fmt="%.2f")
 
-    ax.axhline(1.0, linestyle="--")
+    league_average = df_conv["conversion_rate"].mean()
+
+    ax.axhline(league_average, linestyle="--", color="blue", label="League Avg")
+    ax.legend()
     ax.set_title("Bundesliga 23/24 - Conversion Rate (Goals / xG)")
     ax.set_ylabel("Goals / xG")
     ax.set_xticklabels(df_conv["Team"], rotation=90)
+
+    print(f"League average: {league_average}")
 
     fig.tight_layout()
     fig.savefig(FIG_CONVERSION, dpi=200)
@@ -45,7 +51,8 @@ def main():
 
     colors = ["red" if t == TEAM_NAME else "grey" for t in df_goals["Team"]]
 
-    ax.bar(df_goals["Team"], df_goals["Goals"], color=colors)
+    barsgoals = ax.bar(df_goals["Team"], df_goals["Goals"], color=colors)
+    ax.bar_label(barsgoals, fmt="%.2f")
 
     ax.set_title("Bundesliga 23/24 - Goals Scored")
     ax.set_ylabel("Goals")
