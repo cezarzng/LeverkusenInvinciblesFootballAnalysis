@@ -27,11 +27,9 @@ def main():
 
     ax.set_title("Build-up - Avg progression actions per match", fontsize=14)
 
-    df_prog = df[df["dx"] > 0].copy()
+    df_prog = df[df["is_progressive"] == True].copy()
 
     matches = df_prog["match_id"].nunique()
-    if matches == 0:
-      raise ValueError("No matches found in progressions dataset.")
 
     bins = (24, 16)
 
